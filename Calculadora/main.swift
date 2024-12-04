@@ -11,7 +11,7 @@ func performCalculation() {
     
     func getValidatedInput(prompt: String) -> Double {
         while true {
-            print(prompt)
+            print(prompt, terminator: "")
             if let input = readLine(), let value = Double(input) {
                 return value
             } else {
@@ -36,7 +36,7 @@ func performCalculation() {
         if ["+", "-", "*", "/"].contains(val3) {
             break // Exit the loop if valid
         } else {
-            print("Invalid input. Please enter one of the following: +, -, *, /.")
+            print("Invalid input. Please enter one of the following: +, -, *, /.", terminator: "")
         }
     }
 
@@ -66,7 +66,7 @@ func performCalculation() {
     }
 
     // Step 4: Ask if user wants to perform another calculation
-    print("Do you want to perform another calculation? (yes/no): ")
+    print("Do you want to perform another calculation? (yes/no): ", terminator: "")
     let repeatCalc = readLine() ?? ""
     
     if ["yes", "y"].contains(repeatCalc.lowercased()) {
